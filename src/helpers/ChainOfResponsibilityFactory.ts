@@ -4,6 +4,7 @@ import {
   Header2ChainHandler,
   Header3ChainHandler,
   HorizontalRuleChainHandler,
+  CheckBoxChainHandler
 } from "./ChainHandlers";
 import ParagraphHandler from "./ParagraphHandler";
 import ParseChainHandler from "./ParseChainHandler";
@@ -13,13 +14,15 @@ class ChainOfResponsibilityFactory {
     let header1: Header1ChainHandler = new Header1ChainHandler(document);
     let header2: Header2ChainHandler = new Header2ChainHandler(document);
     let header3: Header3ChainHandler = new Header3ChainHandler(document);
-    let horizontalRule: Header1ChainHandler = new HorizontalRuleChainHandler(document);
+    let horizontalRule: HorizontalRuleChainHandler = new HorizontalRuleChainHandler(document);
     let paragraph: ParagraphHandler = new ParagraphHandler(document);
+    let checkbox: CheckBoxChainHandler = new CheckBoxChainHandler(document);
 
     header1.SetNext(header2);
     header2.SetNext(header3);
     header3.SetNext(horizontalRule);
-    horizontalRule.SetNext(paragraph);
+    horizontalRule.SetNext(checkbox);
+    checkbox.SetNext(paragraph);
 
     return header1;
   }

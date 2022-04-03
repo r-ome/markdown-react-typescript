@@ -9,6 +9,7 @@ export default class TagTypeToHtml {
     this.tagType.set(TagType.Header3, 'h3');
     this.tagType.set(TagType.Paragraph, 'p');
     this.tagType.set(TagType.HorizontalRule, 'hr');
+    this.tagType.set(TagType.CheckBox, 'input type="checkbox"');
   }
 
   openingTag(tagType: TagType): string {

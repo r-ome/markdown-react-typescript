@@ -14,7 +14,7 @@ const App: React.FC = () => {
         </div>
 
         <div className="col-lg-6">
-          <label className="h-100" id="markdown-output"></label>
+          <label className="h-100 w-100" id="markdown-output"></label>
         </div>
       </div>
     </div>

@@ -31,3 +31,9 @@ export class HorizontalRuleVisitor extends VisitorBase {
     super(TagType.HorizontalRule, new TagTypeToHtml());
   }
 }
+
+export class CheckBoxVisitor extends VisitorBase {
+  constructor() {
+    super(TagType.CheckBox, new TagTypeToHtml());
+  }
+}

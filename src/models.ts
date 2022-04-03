@@ -7,7 +7,8 @@ export enum TagType {
   Header1,
   Header2,
   Header3,
-  HorizontalRule
+  HorizontalRule,
+  CheckBox
 }
 
 export interface IMarkdownDocument {
